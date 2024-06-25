@@ -39,7 +39,7 @@ createApp({
         // gestione dell'evento click per andare alla prossima img
         nextGame () {
         this.activeGame ++;
-        if(this.activeGame > this.gamePro.lenght -1){
+        if(this.activeGame > this.gamePro.copertine.length -1){
             // limite del next
             this.activeGame = 0;
         }
@@ -48,7 +48,7 @@ createApp({
         prevGame () {
             this.activeGame --;
             if(this.activeGame < 0) {
-                this.activeGame = this.gamePro.copertine.lenght -1;
+                this.activeGame = this.gamePro.copertine.length -1;
             }
         }
     }
