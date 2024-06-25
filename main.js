@@ -4,8 +4,9 @@ createApp({
     // creiamo per ogni gioco e le info delle applicazioni
     data () {
         return{
+            activeGame : 0,
             gamePro: {
-                compertine : [
+                copertine : [
                     "img/01.webp",
                     'img/02.webp',
                     'img/03.webp',

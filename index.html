@@ -17,15 +17,10 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
-                    <img :src="copertina" alt="Spiderman" v-for="copertina in gamePro.compertine"/>
+                    <img :src="gamePro.copertine[activeGame]" :alt="'Poster' + gamePro.title"/>
                     <div class="text">
-                        <h3>Spiderman</h3>
-                        <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
-                            tempore aliquid deleniti aut
-                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum
-                            corporis.
-                        </p>
+                        <h3>{{gamePro.title[activeGame]}}</h3>
+                        <p>{{gamePro.text[activeGame]}}</p>
                     </div>
                 </div>
 
