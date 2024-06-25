@@ -5,7 +5,9 @@ createApp({
     data () {
         return{
             activeGame : 0,
+
             gamePro: {
+                // array delle immagini
                 copertine : [
                     "img/01.webp",
                     'img/02.webp',
@@ -13,6 +15,7 @@ createApp({
                     'img/04.webp',
                     'img/05.webp',
                 ],
+                // array dei titoli
                 title: [
                     'Marvel\'s Spiderman Miles Morale',
                     'Ratchet & Clank: Rift Apart',
@@ -20,6 +23,7 @@ createApp({
                     'Stray',
                     "Marvel's Avengers",
                 ],
+                // array delle descrizioni
                 text: [
                     'Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.',
                     'Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality.',
@@ -29,5 +33,17 @@ createApp({
                 ]
             },
         }
+    },
+    
+    methods : {
+        // gestione dell'evento click per andare alla prossima img
+        nextGame () {
+        this.activeGame ++;
+        if(this.activeGame > this.gamePro.lenght -1){
+            // limite del next
+            this.activeGame = 0;
+        }
+        }
+        // gestione del click per tornare indietro
     }
 }). mount("#app");

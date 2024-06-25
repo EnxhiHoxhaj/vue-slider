@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev"></div>
+                    <div class="prev" @click = "nextGame"></div>
                     <div class="next"></div>
                     <div class="thumb active">
                         <img :src="gamePro.copertine[activeGame]" :alt="'Poster' + gamePro.title"/>
