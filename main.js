@@ -43,7 +43,13 @@ createApp({
             // limite del next
             this.activeGame = 0;
         }
-        }
+        },
         // gestione del click per tornare indietro
+        prevGame () {
+            this.activeGame --;
+            if(this.activeGame < 0) {
+                this.activeGame = this.gamePro.copertine.lenght -1;
+            }
+        }
     }
 }). mount("#app");
