@@ -27,8 +27,8 @@
                 <div class="thumbs">
                     <div class="prev" @click=" nextGame"></div>
                     <div class="next" @click="prevGame"></div>
-                    <div class="thumb active">
-                        <img :src="thumbImg" :alt="'Poster' + gamePro.title" v-for="thumbImg in gamePro.copertine"/>
+                    <div class="thumb active" >
+                        <img :src="thumbImg" :class="activeGame === index ? 'active' : '' " v-for="(thumbImg, index) in gamePro.copertine" :alt="'Poster' + gamePro.title"/>
                     </div>
 
                 </div>
